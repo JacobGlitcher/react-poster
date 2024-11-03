@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "id": "9c2eeb4d-3b7d-4bad-9zyt-2n4f8b3dcb6d",
+      "name": "Jacob Hernandez",
+      "content": "some example of content"
+    },
+    {
+      "id": "9c6mnb2z-3b7d-4gry-1zyt-9p1f8b3dcv3x",
+      "name": "Alex Doe",
+      "content": "one more example of content"
+    }
+  ]
+}
