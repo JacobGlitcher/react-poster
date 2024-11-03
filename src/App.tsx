@@ -1,13 +1,13 @@
 import './App.module.scss'
 
 import Header from './layouts/Header/Header'
-import Post from './components/features/Post/Post'
+import MainContent from 'src/layouts/MainContent/MainContent.tsx'
 
 const App = () => {
   return (
-    <div className='wrapper'>
+    <div className='wrapper mx-auto max-w-[1536px]'>
       <Header />
-      <Post />
+      <MainContent />
     </div>
   )
 }
