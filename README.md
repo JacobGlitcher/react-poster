@@ -13,6 +13,10 @@ to run the project:
 ```bash
 npm run dev
 ```
+and in a different terminal tab (in order to run the local backend) 
+```bash
+npm run server
+```
 ###
 to format the code with eslint:
 ```bash
