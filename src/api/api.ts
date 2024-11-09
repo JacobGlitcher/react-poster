@@ -38,21 +38,5 @@ export const api = {
       })
       return handleResponse<Post>(response)
     },
-
-    update: async (id: number, updates: Partial<Post>): Promise<Post> => {
-      const response = await fetch(`${API_URL}/posts/${id}`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updates),
-      })
-      return handleResponse<Post>(response)
-    },
-
-    delete: async (id: number): Promise<void> => {
-      const response = await fetch(`${API_URL}/posts/${id}`, {
-        method: 'DELETE',
-      })
-      return handleResponse<void>(response)
-    },
   },
 }

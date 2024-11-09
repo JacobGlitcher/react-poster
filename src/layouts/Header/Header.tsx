@@ -1,6 +1,6 @@
 import { MessageSquareText } from 'lucide-react'
 
-import AddPost from './components/AddPost/AddPost.tsx'
+import AddPost from './components/AddPost/AddPost'
 
 const Header = () => {
   return (

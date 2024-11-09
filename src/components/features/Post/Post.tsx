@@ -1,4 +1,4 @@
-import Card from 'src/components/common/Card/Card.tsx'
+import Card from 'src/components/common/Card/Card'
 
 interface PostProps {
   posterName: string

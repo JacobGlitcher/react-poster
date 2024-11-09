@@ -1,7 +1,7 @@
 import './App.module.scss'
 
 import Header from './layouts/Header/Header'
-import MainContent from 'src/layouts/MainContent/MainContent.tsx'
+import MainContent from 'src/layouts/MainContent/MainContent'
 
 const App = () => {
   return (
