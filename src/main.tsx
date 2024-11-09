@@ -1,10 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App'
+
+import { PostsContextProvider } from 'src/store/PostsContext.tsx'
 import './index.scss'
+
+import App from './App'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <PostsContextProvider>
+      <App />
+    </PostsContextProvider>
   </StrictMode>
 )
