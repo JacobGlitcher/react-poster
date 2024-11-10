@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { APIError } from '../api/api'
 
-interface ApiState<T> {
+export interface ApiState<T> {
   data: T | null
   loading: boolean
   error: APIError | null

@@ -1,8 +1,12 @@
-import { createContext, useContext, useState, ReactNode } from 'react'
+import { createContext, useContext, useState, ReactNode, Dispatch, SetStateAction } from 'react'
+
+import { Post as IPostData } from 'src/types/types'
 
 interface Posts {
   isOpen: boolean
-  setIsOpen: (value: boolean) => void
+  setIsOpen: Dispatch<SetStateAction<boolean>>
+  currentPosts: IPostData[]
+  setCurrentPosts: Dispatch<SetStateAction<IPostData[]>>
 }
 
 const PostsContext = createContext<Posts | undefined>(undefined)
@@ -23,10 +27,13 @@ interface PostsContextProviderProps {
 
 export const PostsContextProvider = ({ children }: PostsContextProviderProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [currentPosts, setCurrentPosts] = useState<IPostData[]>([])
 
   const value: Posts = {
     isOpen,
     setIsOpen,
+    currentPosts,
+    setCurrentPosts,
   }
 
   return <PostsContext.Provider value={value}>{children}</PostsContext.Provider>

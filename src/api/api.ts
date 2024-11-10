@@ -15,6 +15,7 @@ async function handleResponse<T>(response: Response): Promise<T> {
   if (!response.ok) {
     throw new APIError(response.status, await response.text())
   }
+
   return response.json()
 }
 
@@ -30,7 +31,7 @@ export const api = {
       return handleResponse<Post>(response)
     },
 
-    create: async (product: Omit<Post, 'id'>): Promise<Post> => {
+    create: async (product: Post): Promise<Post> => {
       const response = await fetch(`${API_URL}/posts`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
