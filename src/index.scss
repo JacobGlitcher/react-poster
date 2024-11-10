@@ -4,9 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    // colors
+    --primary-color: #8047ba;
+    --primary-dark-color: #460085;
+    --secondary-color: #e5e7eb;
+    --text-primary: #222;
+    --font-family: Roboto, "Helvetica Neue";
+
+    // breakpoints
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+}
+
 body {
-    background-color: $primary-color;
-    font-family: $font-family;
-    color: $text-primary;
+    background-color: var(--primary-color);
+    font-family: var(--font-family), sans-serif;
+    color: var(--text-primary);
     padding: 2.5rem;
 }

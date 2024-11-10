@@ -6,7 +6,7 @@ interface CardProps {
 }
 
 const Card = ({ children, className }: CardProps) => {
-  return <div className={`container rounded bg-gray-200 ${className}`}>{children}</div>
+  return <div className={`bg-secondary-color container rounded ${className}`}>{children}</div>
 }
 
 export default Card

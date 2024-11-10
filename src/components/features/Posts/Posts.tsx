@@ -10,9 +10,9 @@ const Posts = () => {
   const getAllPosts = useCallback(() => api.posts.getAll(), [])
   const { data: posts, loading, error } = useApi<PostInt[]>(getAllPosts)
 
-  if (loading) return <div className='text-xl text-gray-200'>Loading products...</div>
-  if (error) return <div className='text-xl text-gray-200'>Error: {error.message}</div>
-  if (!posts) return <div className='text-xl text-gray-200'>No products found</div>
+  if (loading) return <div className='text-secondary-color text-xl'>Loading products...</div>
+  if (error) return <div className='text-secondary-color text-xl'>Error: {error.message}</div>
+  if (!posts) return <div className='text-secondary-color text-xl'>No products found</div>
 
   return (
     <div className='px-4 sm:px-8'>
