@@ -9,6 +9,21 @@
       "id": "9c6mnb2z-3b7d-4gry-1zyt-9p1f8b3dcv3x",
       "name": "Alex Doe",
       "content": "one more example of content"
+    },
+    {
+      "id": "19f4cb8e-4f7d-4a19-b242-722a2de5fac2",
+      "name": "Mikhail Shufutinsky",
+      "content": "just another post"
+    },
+    {
+      "id": "ee7bb547-11df-4081-844e-38cec8b33321",
+      "name": "Zaven Sleyan",
+      "content": "test"
+    },
+    {
+      "id": "ba2101f7-1e9d-426b-b94f-5fab9b02ab8c",
+      "name": "Slen Zavenyan",
+      "content": "test"
     }
   ]
 }
