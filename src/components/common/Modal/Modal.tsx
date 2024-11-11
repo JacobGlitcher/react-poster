@@ -1,31 +1,26 @@
 import { ReactNode } from 'react'
-
-import { usePostsContext } from 'src/store/PostsContext.tsx'
+import { NavigateFunction, useNavigate } from 'react-router-dom'
 
 interface AddPostProps {
   children: ReactNode
-  isOpen: boolean
 }
 
-const Modal = ({ children, isOpen }: AddPostProps) => {
-  const { setIsOpen } = usePostsContext()
-
+const Modal = ({ children }: AddPostProps) => {
+  const navigate: NavigateFunction = useNavigate()
   const closeModalHandler = (): void => {
-    setIsOpen(false)
+    navigate('..')
   }
 
   return (
-    isOpen && (
-      <>
-        <div
-          className='fixed left-0 top-0 h-lvh w-full bg-gray-950 opacity-50'
-          onClick={closeModalHandler}
-        ></div>
-        <dialog open={isOpen} className='absolute top-1/2 -translate-y-1/2 bg-transparent'>
-          {children}
-        </dialog>
-      </>
-    )
+    <>
+      <div
+        className='fixed left-0 top-0 h-lvh w-full bg-gray-950 opacity-50'
+        onClick={closeModalHandler}
+      ></div>
+      <dialog open className='absolute top-1/2 -translate-y-1/2 bg-transparent'>
+        {children}
+      </dialog>
+    </>
   )
 }
 

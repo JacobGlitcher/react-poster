@@ -1,17 +1,11 @@
-import { usePostsContext } from 'src/store/PostsContext.tsx'
-
 import Posts from 'src/components/features/Posts/Posts'
-import Modal from 'src/components/common/Modal/Modal'
-import PostForm from 'src/components/features/PostForm/PostForm.tsx'
+
+import { Outlet } from 'react-router-dom'
 
 const MainContent = () => {
-  const { isOpen } = usePostsContext()
-
   return (
     <div>
-      <Modal isOpen={isOpen}>
-        <PostForm />
-      </Modal>
+      <Outlet />
       <Posts />
     </div>
   )
