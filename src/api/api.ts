@@ -26,7 +26,7 @@ export const api = {
       return handleResponse<Post[]>(response)
     },
 
-    getById: async (id: number): Promise<Post> => {
+    getById: async (id: string): Promise<Post> => {
       const response = await fetch(`${API_URL}/posts/${id}`)
       return handleResponse<Post>(response)
     },

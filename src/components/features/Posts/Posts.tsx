@@ -17,15 +17,15 @@ const Posts = () => {
     setCurrentPosts(posts ?? [])
   }, [posts, setCurrentPosts])
 
-  if (loading) return <div className='text-secondary-color text-xl'>Loading products...</div>
-  if (error) return <div className='text-secondary-color text-xl'>Error: {error.message}</div>
-  if (!posts) return <div className='text-secondary-color text-xl'>No products found</div>
+  if (loading) return <div className='text-xl text-secondary-color'>Loading products...</div>
+  if (error) return <div className='text-xl text-secondary-color'>Error: {error.message}</div>
+  if (!posts) return <div className='text-xl text-secondary-color'>No products found</div>
 
   return (
     <div className='px-4 sm:px-8'>
       <div className='mx-auto flex max-w-[1280px] flex-wrap justify-center gap-4'>
         {currentPosts?.map((post) => (
-          <Post posterName={post.name} content={post.content} key={post.id} />
+          <Post posterName={post.name} content={post.content} id={post.id} key={post.id} />
         ))}
       </div>
     </div>

@@ -1,7 +1,10 @@
+import { loader as postLoader } from 'src/components/features/PostDetails/PostDetails.tsx'
+
 import ErrorPage from '../ErrorPage'
 import Root from 'src/routes/components/Root.tsx'
 import MainContent from 'src/layouts/MainContent/MainContent.tsx'
 import PostForm from 'src/components/features/PostForm/PostForm.tsx'
+import PostDetails from 'src/components/features/PostDetails/PostDetails.tsx'
 
 export const routes = [
   {
@@ -16,6 +19,11 @@ export const routes = [
           {
             path: '/create-post',
             element: <PostForm />,
+          },
+          {
+            path: '/:postId',
+            element: <PostDetails />,
+            loader: postLoader,
           },
         ],
       },
