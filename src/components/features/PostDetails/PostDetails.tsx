@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData, LoaderFunctionArgs } from 'react-router-dom'
 
 import { Post as IPost } from 'src/types/types'
 import { api } from 'src/api/api.ts'
@@ -24,8 +24,8 @@ const PostDetails = () => {
 
 export default PostDetails
 
-export const loader = async ({ params }: { params: { postId: string } }) => {
-  const postById: IPost = await api.posts.getById(params.postId)
+export const loader = async ({ params }: LoaderFunctionArgs): Promise<PostDetailsLoaderData> => {
+  const postById: IPost = await api.posts.getById(params.postId as string)
 
   return { postById }
 }
